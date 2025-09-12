@@ -8,12 +8,13 @@ function Home() {
         { id: 3, title: "Suits", release_date: 2013},
     ];
 
-    const handleMovieSearch = () => {}
+    const handleMovieSearch = () => {};
 
     return(
         <div className="home">
             <form onSubmit={handleMovieSearch} className="search-form">
                 <input type="text" placeholder="search for a movie" className="search-imput" />
+                <button type="submit" className="serach-submit-btn"> Search </button>
             </form>
             <div className="movie-grid">
                 {movieList.map((movie) => 
@@ -23,4 +24,4 @@ function Home() {
     );
 }
 
-export default Home
+export default Home;

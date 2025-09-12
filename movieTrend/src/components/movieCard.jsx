@@ -3,7 +3,7 @@ function MovieCard({movie}) {
 
     function clickFivoriteBtn() {
         alert('you clicked the favorite btn')
-    }
+    };
 
     return (
     <div className="movie-card">
@@ -20,4 +20,4 @@ function MovieCard({movie}) {
     </div>)
 }
 
-export default MovieCard
+export default MovieCard;
