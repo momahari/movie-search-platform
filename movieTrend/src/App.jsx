@@ -1,5 +1,4 @@
 import './css/App.css'
-import MovieCard from './components/movieCard'   
 import NavBar from './components/NavBar'  
 import Home from './pages/home' 
 import Favorites from './pages/favorites'
@@ -16,7 +15,7 @@ function App() {
         <Routes>
           <Route path='/' element={ <Home /> } />
           <Route path='/Favorites' element={ <Favorites /> } />
-          <Route path='/movie/:title' element={ <MovieInfo /> } />
+          <Route path="/movie/:id" element={<MovieInfo />} />
         </Routes>
       </main>
     </MovieProvider>
