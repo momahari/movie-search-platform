@@ -6,7 +6,6 @@ import '../css/Home.css'
 function Home() {
 
     const [searchQuery, setSearchQuery] = useState("")
-
     const [ movieList, setMovieList ] = useState( [] );
     const [ error, setError ] = useState( null );
     const [ loading, setLoading ] = useState( true );
