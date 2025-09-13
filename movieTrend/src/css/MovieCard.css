@@ -94,6 +94,12 @@
     margin: 0;
 }
 
+.movie-info h3:hover {
+    color: #cfb5ed;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 .movie-info p {
     color: #999;
     font-size: 0.9rem;
