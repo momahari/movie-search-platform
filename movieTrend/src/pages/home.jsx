@@ -28,9 +28,28 @@ function Home() {
     }, []);
 
     // Handle search form submission
-    function handleMovieSearch(e) {
+    async function handleMovieSearch(e) {
         e.preventDefault();
-        // Optionally, you can implement API search here
+        if (!searchQuery.trim()) {
+            return; // Do nothing if the search query is empty
+        }
+        if (loading) {
+            return; // Prevent multiple searches while loading
+        }
+        setLoading(true);
+        try
+        {
+            const searchResults = await getMovieDetails(searchQuery);
+            setMovieList( searchResults.results );
+            setError(null);
+        } catch ( error )
+        {
+            setError(error);
+            setError("Error searching for movies:");
+        } finally {
+            setLoading(false);
+        }
+        setSearchQuery("");
     }
 
     return(
@@ -50,6 +69,7 @@ function Home() {
                         ))
                     }
                 </div> }
+            <button className="load-more-btn">Load More</button>
         </div>
     );
 }

@@ -20,7 +20,9 @@ function MovieCard({movie}) {
         </div>
         <div className="movie-info">
             <h3> {movie.title} </h3>
-            <p>{movie.release_date}</p>
+                <p>{ movie.release_date }</p>
+                <p className='user-rating'> ⭐ { movie.vote_average } </p>
+                <p className="movie-overview"> { movie.overview } </p>
         </div>
     </div>)
 }

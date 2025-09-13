@@ -105,10 +105,9 @@
     font-size: 0.9rem;
 }
 
-.user-rating {
+.user-rating:hover {
     color: #ffd700;
-    font-size: 0.9rem;
-    margin-top: auto;
+    font-size: 1rem;
 }
 
 @media (max-width: 768px) {
