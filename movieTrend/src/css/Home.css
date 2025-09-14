@@ -38,7 +38,15 @@
     white-space: nowrap;
 }
 
-.search-submit-btn:hover {
+.load-more-btn {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+}
+
+.search-submit-btn:hover, .load-more-btn:hover {
     background-color: #f40612;
     cursor: pointer;
     box-shadow: #eee 0px 0px 8px;

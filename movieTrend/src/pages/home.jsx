@@ -68,7 +68,7 @@ function Home() {
                         ))
                     }
                 </div> }
-            <button className="load-more-btn">Load More</button>
+            <button className="load-more-btn">Load More &gt;&gt; </button>
         </div>
     );
 }

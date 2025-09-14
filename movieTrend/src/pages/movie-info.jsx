@@ -42,16 +42,17 @@ function MovieInfo() {
 
     return (
         <div className='movie-info-page'>
-            <div>
-                <img className='background-image' src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`} alt={`Backdrop for ${movie.title}`} />
+            <div className='background-image'>
+                <img src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`} alt={`Backdrop for ${movie.title}`} />
             </div>
-            <div className='movie-info-content'>
+            <div className='movie-info-container'>
                 <h1>{movie.title}</h1>
-                <h3 className='genres'>Genres: {movie.genres ? movie.genres.map(g => g.name).join(', ') : 'N/A'}</h3>
-                <p>{movie.overview}</p>
-                <p className='actors'>Actors: {movie.actors ? movie.actors.join(', ') : 'N/A'}</p>
-                <p>Release Date: {movie.release_date}</p>
-                <p>User Rating: ⭐ {movie.vote_average}</p>
+                <h3>Genres: {movie.genres ? movie.genres.map(g => g.name).join(', ') : 'N/A'}</h3>
+                <p>{ movie.overview }</p>
+                <h3>Directors: {movie.directors ? movie.directors.join(', ') : 'N/A'}</h3>
+                <h3>Actors: {movie.actors ? movie.actors.join(', ') : 'N/A'}</h3>
+                <h4>Release Date: {movie.release_date}</h4>
+                <h4 className='user-rating'>User Rating: ⭐ {movie.vote_average}</h4>
                 <p className='movie-overview'>{movie.overview}</p>
             </div>
         </div>
