@@ -4,7 +4,7 @@ import { useMovieContext } from '../contexts/movieContexts.jsx';
 
 function MovieCard ( { movie } )
 {
-    const { isFavorite, addFavorite, removeFavorite } = useMovieContext();
+    const { favorites,isFavorite, addFavorite, removeFavorite } = useMovieContext();
 
     function clickFavoriteBtn(e) {
         e.preventDefault();
@@ -13,6 +13,7 @@ function MovieCard ( { movie } )
         } else {
             addFavorite(movie);
         }
+        console.log('movie.id:', movie.id, 'favorites:', favorites.map(f => f.id));
     };
 
     function clickMovieCard() {
@@ -29,7 +30,12 @@ function MovieCard ( { movie } )
                 />
                 </Link>
             <div className="movie-like">
-                <button className={isFavorite(movie.id) ? "favorite-btn active" : "favorite-btn"} onClick={clickFavoriteBtn}> 🤍 </button>
+                <button
+                    type="button"
+                    className={`favorite-btn${isFavorite(movie.id) ? " active" : ""}`}
+                    onClick={clickFavoriteBtn}
+                    aria-pressed={isFavorite(movie.id)}
+                > ♥ </button>
             </div>
         </div>
         <div className="movie-info">
