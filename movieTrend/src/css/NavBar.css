@@ -1,4 +1,15 @@
 
+@keyframes brand-rotate {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(-45deg);
+    }
+    100% {
+        transform: rotateY(45deg);
+    }
+}
 .navbar {
     background-color: #000000;
     padding: 1rem 2rem;
@@ -9,8 +20,13 @@
 }
 
 .navbar-brand {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    color: #ffffff;
+    text-decoration: double;
     font-weight: bold;
+    margin-left: 4rem;
+    text-shadow: #df88e2 0px 0px 20px;
+    animation: brand-rotate 3s infinite;
 }
 
 .navbar-links {
@@ -19,9 +35,10 @@
 }
 
 .nav-link {
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding: 0.5rem 1rem;
     border-radius: 4px;
+    text-shadow: #b500b5 0px 0px 3px;
     transition: background-color 0.2s;
 }
 
