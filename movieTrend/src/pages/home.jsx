@@ -83,7 +83,7 @@ function Home() {
                 </div>
             )}
             {hasMore && !loading && (
-                <button className="load-more-btn" onClick={handleLoadMore}>Load More</button>
+                <button className="load-more-btn" onClick={handleLoadMore}>Load More &gt;&gt; </button>
             )}
         </div>
     );
