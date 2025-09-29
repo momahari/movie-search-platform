@@ -19,6 +19,7 @@ function MovieInfo() {
                 const data = await getMovieDetails(movieId);
                 console.log('Fetched movie data:', data);
                 setMovie(data);
+            // eslint-disable-next-line no-unused-vars
             } catch (err) {
                 setError("Failed to fetch movie details.");
             } finally {
